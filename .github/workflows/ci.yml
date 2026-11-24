@@ -10,7 +10,6 @@ on:
 
 permissions:
   contents: read
-  packages: write
 
 env:
   IMAGE_NAME: ghcr.io/${{ github.repository }}
@@ -67,9 +66,10 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
 
-    # ИНЦИДЕНТ 1: пока отсутствует packages: write
     permissions:
       contents: read
+      packages: write
+
 
     steps:
       - name: Checkout
