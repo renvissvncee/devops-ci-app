@@ -1,6 +1,13 @@
+
 # devops-ci-app
-DevOps practical work 10
 
-## Practical Work 10
+Учебное Flask-приложение для практической работы № 10.
 
-CI/CD pipeline with GitHub Actions, Docker and GHCR.
+CI: Pylint → pytest → Docker build → smoke-test → GHCR.
+
+Публикация образа выполняется только из `main`. В Pull Request выполняются
+проверки без push.
+
+- health endpoint: `/health`;
+- образ: `ghcr.io/renvissvncee/devops-ci-app`;
+- основной workflow: `.github/workflows/ci.yml`.
